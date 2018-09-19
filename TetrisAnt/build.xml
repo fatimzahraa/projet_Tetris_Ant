@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<project name="compilation de Tetris" default="compile">
+	
+		<target name="clean" >			
+				<echo message="Suppression des fichiers issus de la compilation"></echo>
+				<delete dir="bin"/>
+		</target>
+	
+		<target name="compile" >
+			<mkdir dir="bin"/>
+			<javac srcdir="src" destdir="bin" classpath="lib/commons-lang3-3.5.jar" 
+				executable="$(javac.version)"/>
+				
+		</target>
+	
+		<target name="dist" depends="clean,compile" >
+			<jar jarfile="bin/Tetris.jar" basedir="bin"></jar>
+			
+		</target>
+
+</project>

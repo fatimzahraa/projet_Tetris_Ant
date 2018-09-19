@@ -17,6 +17,13 @@
 	
 		<target name="dist" depends="clean,compile" >
 			<jar jarfile="bin/Tetris.jar" basedir="bin"></jar>
+				<manifest>
+					<attribute name="" value=""/>
+					<attribute name="" value=""/>
+					<attribute name="" value=""/>
+					<attribute name="" value=""/>
+
+</manifest>
 			
 		</target>
 
